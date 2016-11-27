@@ -102,7 +102,6 @@
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SessionViewModel.cs" />
     <Compile Include="Views\WebLogonView.xaml.cs">
       <DependentUpon>WebLogonView.xaml</DependentUpon>
     </Compile>
@@ -164,8 +163,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BlackBee.Base">
-      <HintPath>..\..\BlackBee-Toolkit\BlackBee.Base\bin\Debug\BlackBee.Base.dll</HintPath>
+    <Reference Include="BlackBee.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BlackBee-Toolkit\BlackBee.Base\bin\Release\BlackBee.Base.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0' ">

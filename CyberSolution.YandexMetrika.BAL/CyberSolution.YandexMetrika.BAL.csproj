@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="BussinessContext.cs" />
     <Compile Include="CounterContext.cs" />
+    <Compile Include="Models\CounterModel.cs" />
     <Compile Include="Interfaces\IBussinessContext.cs" />
     <Compile Include="Interfaces\ICounterContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +120,12 @@
       <Project>{A127D5A6-0B23-4AA3-AE11-C85D1949001B}</Project>
       <Name>CyberSolution.YandexMetrika.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.Web.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0' ">
     <VisualStudioVersion>15.0</VisualStudioVersion>

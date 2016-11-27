@@ -112,14 +112,27 @@
     <Compile Include="ViewModels\CountersViewModel.cs" />
     <Compile Include="ViewModels\ICounter.cs" />
     <Compile Include="ViewModels\IMain.cs" />
+    <Compile Include="ViewModels\ISession.cs" />
+    <Compile Include="ViewModels\ISessionCommands.cs" />
+    <Compile Include="ViewModels\ISessionMethods.cs" />
     <Compile Include="ViewModels\LogonViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\SessionLogic.cs" />
+    <Compile Include="ViewModels\SessionState.cs" />
+    <Compile Include="ViewModels\SessionViewModel.cs" />
     <EmbeddedResource Include="Properties\CyberSolution.YandexMetrika.Shared.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BlackBee.Base">
-      <HintPath>..\..\BlackBee-Toolkit\BlackBee.Base\bin\Debug\BlackBee.Base.dll</HintPath>
+    <Reference Include="BlackBee.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BlackBee-Toolkit\BlackBee.Base\bin\Release\BlackBee.Base.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CyberSolution.YandexMetrika.BAL\CyberSolution.YandexMetrika.BAL.csproj">
+      <Project>{97ed757c-885b-4c1e-bd6e-d2342231ca38}</Project>
+      <Name>CyberSolution.YandexMetrika.BAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0' ">
     <VisualStudioVersion>15.0</VisualStudioVersion>

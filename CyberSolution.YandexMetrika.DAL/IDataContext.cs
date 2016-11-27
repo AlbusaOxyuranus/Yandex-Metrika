@@ -1,12 +1,16 @@
 ﻿
+
+
+using System;
+
 namespace CyberSolution.YandexMetrika.DAL
 {
-    using CyberSolution.YandexMetrika.DAL.ProxyClasses;
+    using ProxyClasses;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    interface IDataContext
+    public interface IDataContext: IDisposable
     {
-        Task<List<Counter>> GetListCounterAsync();
+        Task<List<Counter>> GetCountersAsync(string token);
     }
 }

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using Windows.Foundation;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
-using CyberSolution.YandexMetrika.Shared;
 using CyberSolution.YandexMetrika.Shared.ViewModels;
-using BlackBee.Base;
-using Windows.UI.Core;
 using System.Threading.Tasks;
+using  BlackBee.Base;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -42,11 +37,11 @@ namespace CyberSolution.YandexMetrika.UWP.Views
                     if (!string.IsNullOrEmpty(token.Value))
                     {
 
-                        var task = CounterViewModel.GetDataAsync();
+                        var task = CounterViewModel.GetDataAsync(SessionViewModel.Instance.Token);
                         task.ContinueWith((t) =>
                          {
                              StoreStorage.CreateOrGet<CounterViewModel>().Items = task.Result;
-                             StoreStorage.CreateOrGet<SessionViewModel>().Token = token.Value;
+                             SessionViewModel.Instance.Token = token.Value;
                              this.Frame.Navigate(typeof(MainView));
                          }, TaskScheduler.FromCurrentSynchronizationContext());
 

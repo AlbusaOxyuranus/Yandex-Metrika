@@ -1,9 +1,11 @@
-﻿namespace CyberSolution.YandexMetrika.BAL
+﻿using System;
+
+namespace CyberSolution.YandexMetrika.BAL
 {
     using Interfaces;
-    using CyberSolution.YandexMetrika.DAL;
+    using DAL;
 
-    public interface IBussinessContext: ICounterContext
+    public interface IBussinessContext: IDisposable,ICounterContext
     {
         DataContext DataContext { get; }
 

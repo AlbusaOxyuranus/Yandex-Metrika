@@ -8,10 +8,8 @@ namespace CyberSolution.YandexMetrika.EasyConnect
     {
         HttpClient HttpClient { get; }
 
-
-
         #region GET
-        Task<TResult> GetAsync<TResult>(string uri,string token) where TResult : class;
+        Task<TResult> GetAsync<TResult>(string uri) where TResult : class;
 
         #endregion
     }

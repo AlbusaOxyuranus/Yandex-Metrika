@@ -39,11 +39,12 @@ namespace CyberSolution.YandexMetrika.EasyConnect
             //Временно
             return default(TClass);
         }
-        public async Task<TResult> GetAsync<TResult>(string uri, string token) where TResult : class
+        public async Task<TResult> GetAsync<TResult>(string uri) where TResult : class
         {
 #if ON_LOG
             Debug.WriteLine(" Dev Windows Phone Log : >> url =  " + uri);
 #endif
+            
             var response = await HttpClient.GetAsync(uri);
             var result = await GetObject<TResult>(response);
 

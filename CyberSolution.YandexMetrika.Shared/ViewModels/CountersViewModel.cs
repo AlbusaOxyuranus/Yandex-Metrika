@@ -1,5 +1,7 @@
 ﻿
 
+using CyberSolution.YandexMetrika.BAL;
+
 namespace CyberSolution.YandexMetrika.Shared.ViewModels
 {
     using BlackBee.Base;
@@ -15,17 +17,17 @@ namespace CyberSolution.YandexMetrika.Shared.ViewModels
             Items = new ObservableCollection<CounterViewModel>();
 
         }
-        ObservableCollection<CounterViewModel> items;
+        ObservableCollection<CounterViewModel> _items;
         public ObservableCollection<CounterViewModel> Items
         {
             get
             {
-                return items;
+                return _items;
             }
 
             set
             {
-                items = value;
+                _items = value;
                 NotifyPropertyChanged();
             }
         }
@@ -36,12 +38,23 @@ namespace CyberSolution.YandexMetrika.Shared.ViewModels
 
         
 
-        public static async Task<ObservableCollection<CounterViewModel>> GetDataAsync()
+        public static async Task<ObservableCollection<CounterViewModel>> GetDataAsync(string token)
         {
             await Task.Delay(100);
             ObservableCollection<CounterViewModel> collection = new ObservableCollection<CounterViewModel>();
-            collection.Add(new CounterViewModel() { Name = "softisfuture-seo-monnaanna" });
-            return collection;
+            //collection.Add(new CounterViewModel() { Name = "softisfuture-seo-monnaanna" });
+
+            using (var bc = new BussinessContext())
+            {
+               var result = await bc.GetCountersAsync(token);
+                foreach (var item in result)
+                {
+                    collection.Add(new CounterViewModel() {Id=item.Id,Name = item.OwnerLogin});
+                }
+            }
+                return collection;
         }
+
+        public decimal Id { get; set; }
     }
 }
