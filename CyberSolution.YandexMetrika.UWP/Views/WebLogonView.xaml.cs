@@ -5,6 +5,8 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using CyberSolution.YandexMetrika.Shared;
 using CyberSolution.YandexMetrika.Shared.ViewModels;
+using BlackBee.Base;
+using Windows.UI.Core;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -18,16 +20,11 @@ namespace CyberSolution.YandexMetrika.UWP.Views
         public WebLogonView()
         {
             this.InitializeComponent();
+            DataContext = StoreStorage.CreateOrGet<LogonViewModel>();
+            webViewControl.Source = new Uri(string.Format("https://oauth.yandex.ru/authorize?response_type=token&client_id=c087f4071220480dabba7a35f6172681&login_hint={0}&force_confirm=yes", StoreStorage.CreateOrGet<LogonViewModel>().Email, StoreStorage.CreateOrGet<LogonViewModel>().Password));
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            LogonViewModel login =new LogonViewModel();
-            webViewControl.Source = new Uri(string.Format("https://oauth.yandex.ru/authorize?response_type=token&client_id=" +
-                                                          "c087f4071220480dabba7a35f6172681" +
-                                                          "&login_hint={0}&force_confirm=yes", login.Email,login.Password));
-        }
+
 
         private void WebViewControl_OnNavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
@@ -40,10 +37,17 @@ namespace CyberSolution.YandexMetrika.UWP.Views
                 if (match.Success)
                 {
                     var token = match.Groups["token"];
-                    
+
                     if (!string.IsNullOrEmpty(token.Value))
                     {
-                        this.Frame.Navigate(typeof(MainView));
+                        var dispatcher = Windows.UI.Core.CoreWindow.GetForCurrentThread().Dispatcher;
+                        var ignored = dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
+                        {
+                            StoreStorage.CreateOrGet<CounterViewModel>().Items = await CounterViewModel.GetDataAsync();
+                            this.Frame.Navigate(typeof(MainView));
+                        });
+                        
+                        
                     }
 
                 }

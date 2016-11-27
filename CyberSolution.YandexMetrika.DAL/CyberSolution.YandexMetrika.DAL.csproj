@@ -110,6 +110,7 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="IDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyClasses\Counter.cs" />
     <EmbeddedResource Include="Properties\CyberSolution.YandexMetrika.DAL.rd.xml" />
   </ItemGroup>
   <ItemGroup>

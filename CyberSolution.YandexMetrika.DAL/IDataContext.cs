@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CyberSolution.YandexMetrika.DAL
 {
+    using CyberSolution.YandexMetrika.DAL.ProxyClasses;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
     interface IDataContext
     {
-
+        Task<List<Counter>> GetListCounterAsync();
     }
 }

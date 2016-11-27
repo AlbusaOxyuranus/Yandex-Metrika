@@ -1,5 +1,8 @@
-﻿using System;
+﻿using BlackBee.Base;
+using CyberSolution.YandexMetrika.Shared.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +28,9 @@ namespace CyberSolution.YandexMetrika.UWP.Views
         public MainView()
         {
             this.InitializeComponent();
+            DataContext = StoreStorage.CreateOrGet<CounterViewModel>();
+
+
         }
     }
 }

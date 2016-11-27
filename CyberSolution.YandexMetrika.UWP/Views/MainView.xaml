@@ -5,9 +5,13 @@
     xmlns:local="using:CyberSolution.YandexMetrika.UWP.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    xmlns:viewModel="using:CyberSolution.YandexMetrika.Shared.ViewModels"
+   
+    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:CounterViewModel, IsDesignTimeCreatable=False}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView HorizontalAlignment="Left" Height="508" 
+                  VerticalAlignment="Top" Width="350" ItemsSource="{Binding Items}"/>
 
     </Grid>
 </Page>

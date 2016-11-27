@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSolution.YandexMetrika
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSolution.YandexMetrika.Shared", "CyberSolution.YandexMetrika.Shared\CyberSolution.YandexMetrika.Shared.csproj", "{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSolution.YandexMetrika.BAL", "CyberSolution.YandexMetrika.BAL\CyberSolution.YandexMetrika.BAL.csproj", "{97ED757C-885B-4C1E-BD6E-D2342231CA38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,22 @@ Global
 		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|x64.Build.0 = Release|x64
 		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|x86.ActiveCfg = Release|x86
 		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|x86.Build.0 = Release|x86
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|ARM.ActiveCfg = Debug|ARM
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|ARM.Build.0 = Debug|ARM
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|x64.ActiveCfg = Debug|x64
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|x64.Build.0 = Debug|x64
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|x86.ActiveCfg = Debug|x86
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|x86.Build.0 = Debug|x86
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Release|ARM.ActiveCfg = Release|ARM
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Release|ARM.Build.0 = Release|ARM
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Release|x64.ActiveCfg = Release|x64
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Release|x64.Build.0 = Release|x64
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Release|x86.ActiveCfg = Release|x86
+		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
