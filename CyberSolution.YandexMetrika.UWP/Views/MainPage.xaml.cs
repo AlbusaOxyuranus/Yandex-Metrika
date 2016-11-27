@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using CyberSolution.YandexMetrika.Shared.ViewModels;
+using CyberSolution.YandexMetrika.UWP.Views;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x419
 
@@ -25,6 +27,12 @@ namespace CyberSolution.YandexMetrika.UWP
         public MainPage()
         {
             this.InitializeComponent();
+            DataContext=new LogonViewModel();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(WebLogonView));
         }
     }
 }
