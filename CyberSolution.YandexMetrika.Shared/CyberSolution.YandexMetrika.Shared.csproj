@@ -111,7 +111,9 @@
     <Compile Include="UriHelper.cs" />
     <Compile Include="ViewModels\CountersViewModel.cs" />
     <Compile Include="ViewModels\ICounter.cs" />
+    <Compile Include="ViewModels\IMain.cs" />
     <Compile Include="ViewModels\LogonViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
     <EmbeddedResource Include="Properties\CyberSolution.YandexMetrika.Shared.rd.xml" />
   </ItemGroup>
   <ItemGroup>

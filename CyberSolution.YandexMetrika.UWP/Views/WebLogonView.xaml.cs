@@ -7,6 +7,7 @@ using CyberSolution.YandexMetrika.Shared;
 using CyberSolution.YandexMetrika.Shared.ViewModels;
 using BlackBee.Base;
 using Windows.UI.Core;
+using System.Threading.Tasks;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,7 +27,7 @@ namespace CyberSolution.YandexMetrika.UWP.Views
 
 
 
-        private void WebViewControl_OnNavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        private  void WebViewControl_OnNavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
             if (args.IsSuccess)
             {
@@ -40,33 +41,23 @@ namespace CyberSolution.YandexMetrika.UWP.Views
 
                     if (!string.IsNullOrEmpty(token.Value))
                     {
-                        var dispatcher = Windows.UI.Core.CoreWindow.GetForCurrentThread().Dispatcher;
-                        var ignored = dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
-                        {
-                            StoreStorage.CreateOrGet<CounterViewModel>().Items = await CounterViewModel.GetDataAsync();
-                            this.Frame.Navigate(typeof(MainView));
-                        });
-                        
-                        
-                    }
+
+                        var task = CounterViewModel.GetDataAsync();
+                        task.ContinueWith((t) =>
+                         {
+                             StoreStorage.CreateOrGet<CounterViewModel>().Items = task.Result;
+                             this.Frame.Navigate(typeof(MainView));
+                         }, TaskScheduler.FromCurrentSynchronizationContext());
+
+
+
+                    };
 
                 }
-                //WwwFormUrlDecoder decoder=new WwwFormUrlDecoder(args.Uri.ToString());
-                //foreach (var word in decoder)
-                //{
-                //    if (word.Name == "access_token")
-                //    {
-
-                //    }
-                //}
-                //                var regex = new System.Text.RegularExpressions.Regex("[?&]access_token(?:=(?<token>[^&]*))?");
-
-                //var match = regex.Match(args.Uri.ToString());
-                //if (match.Success)
-                //{
-                //    var str = match.Groups["token"];
-                //}
             }
+
         }
+
+  
     }
 }

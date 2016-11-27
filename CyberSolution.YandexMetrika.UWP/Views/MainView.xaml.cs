@@ -28,9 +28,15 @@ namespace CyberSolution.YandexMetrika.UWP.Views
         public MainView()
         {
             this.InitializeComponent();
-            DataContext = StoreStorage.CreateOrGet<CounterViewModel>();
+            DataContext = StoreStorage.CreateOrGet<MainViewModel>();
+            StoreStorage.CreateOrGet<MainViewModel>().Logon = StoreStorage.CreateOrGet<LogonViewModel>();
+            StoreStorage.CreateOrGet<MainViewModel>().Counters = StoreStorage.CreateOrGet<CounterViewModel>();
+        }
 
-
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+            
         }
     }
 }
