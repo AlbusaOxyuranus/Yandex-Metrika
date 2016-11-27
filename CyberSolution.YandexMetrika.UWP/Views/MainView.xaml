@@ -55,7 +55,8 @@
 
 
                 <Grid Margin="10,50,10,10" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <ListBox HorizontalAlignment="Left" 
+                    <TextBlock Text="Счетчики" HorizontalAlignment="Center"/>
+                    <ListBox HorizontalAlignment="Left" Margin="0,40,0,0" 
                               VerticalAlignment="Top" ItemsSource="{Binding Counters.Items}" HorizontalContentAlignment="Stretch" ItemTemplate="{StaticResource CounterListDataTemplate}" />
 
                 </Grid>

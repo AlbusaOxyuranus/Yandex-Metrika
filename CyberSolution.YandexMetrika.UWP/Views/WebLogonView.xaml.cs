@@ -46,6 +46,7 @@ namespace CyberSolution.YandexMetrika.UWP.Views
                         task.ContinueWith((t) =>
                          {
                              StoreStorage.CreateOrGet<CounterViewModel>().Items = task.Result;
+                             StoreStorage.CreateOrGet<SessionViewModel>().Token = token.Value;
                              this.Frame.Navigate(typeof(MainView));
                          }, TaskScheduler.FromCurrentSynchronizationContext());
 
