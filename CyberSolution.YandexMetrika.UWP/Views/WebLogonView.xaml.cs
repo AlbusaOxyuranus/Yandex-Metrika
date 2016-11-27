@@ -41,9 +41,9 @@ namespace CyberSolution.YandexMetrika.UWP.Views
                 {
                     var token = match.Groups["token"];
                     
-                    if (string.IsNullOrEmpty(token.Value))
+                    if (!string.IsNullOrEmpty(token.Value))
                     {
-                        this.Frame.Navigate(typeof(MainPage));
+                        this.Frame.Navigate(typeof(MainView));
                     }
 
                 }
