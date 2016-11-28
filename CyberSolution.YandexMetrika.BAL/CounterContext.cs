@@ -27,6 +27,8 @@ namespace CyberSolution.YandexMetrika.BAL
                 CounterModel counterModel = new CounterModel()
                 {
                     Id=counter.Id,
+                    Name=counter.Name,
+                    Site=counter.Site,
                     OwnerLogin = counter.OwnerLogin                    
                 };
                 list.Add(counterModel);

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CyberSolution.YandexMetrika.BAL</RootNamespace>
     <AssemblyName>CyberSolution.YandexMetrika.BAL</AssemblyName>
-    <DefaultLanguage>ru-RU</DefaultLanguage>
+    <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
@@ -109,26 +109,24 @@
   <ItemGroup>
     <Compile Include="BussinessContext.cs" />
     <Compile Include="CounterContext.cs" />
-    <Compile Include="Models\CounterModel.cs" />
     <Compile Include="Interfaces\IBussinessContext.cs" />
     <Compile Include="Interfaces\ICounterContext.cs" />
+    <Compile Include="Models\CounterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\CyberSolution.YandexMetrika.BAL.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CyberSolution.YandexMetrika.DAL\CyberSolution.YandexMetrika.DAL.csproj">
-      <Project>{A127D5A6-0B23-4AA3-AE11-C85D1949001B}</Project>
+      <Project>{a127d5a6-0b23-4aa3-ae11-c85d1949001b}</Project>
       <Name>CyberSolution.YandexMetrika.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CyberSolution.YandexMetrika.EasyConnect\CyberSolution.YandexMetrika.EasyConnect.csproj">
+      <Project>{a8167125-2c5d-4a60-96ff-64a8d85ffc57}</Project>
+      <Name>CyberSolution.YandexMetrika.EasyConnect</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.Web.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0' ">
-    <VisualStudioVersion>15.0</VisualStudioVersion>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

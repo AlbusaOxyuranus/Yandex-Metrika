@@ -32,7 +32,14 @@ namespace CyberSolution.YandexMetrika.DAL
         }
         public async Task<List<Counter>> GetCountersAsync(string token)
         {
-            return await Proxy.GetAsync<List<Counter>>(BaseAddress + _countersPath+ "&oauth_token="+token);
+            List<Counter> list = new List<Counter>();
+            var res=    await Proxy.GetAsync<Counters>(BaseAddress + _countersPath + "?oauth_token=" + token);
+            if (res.Rows > 0)
+                foreach (var item in res.list)
+                {
+                    list.Add(new Counter() { Id = item.Id,Name=item.Name });
+                }
+            return list;
         }
     }
 }

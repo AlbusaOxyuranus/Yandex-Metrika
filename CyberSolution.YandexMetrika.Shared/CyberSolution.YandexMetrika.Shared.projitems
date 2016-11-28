@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>12c3a33b-607d-4540-bca6-78584585ed66</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CyberSolution.YandexMetrika.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)UriHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CountersViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ICounter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ISession.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ISessionCommands.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ISessionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LogonViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SessionLogic.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SessionState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SessionViewModel.cs" />
+  </ItemGroup>
+</Project>

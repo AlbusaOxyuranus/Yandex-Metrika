@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="356a06bf-97e4-4eb2-a5e1-42d0ef2e3c5f"
+    Name="28a9fd6a-665f-4745-9909-fddabeb110b2"
     Publisher="CN=mrPro_000"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="356a06bf-97e4-4eb2-a5e1-42d0ef2e3c5f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="28a9fd6a-665f-4745-9909-fddabeb110b2" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>CyberSolution.YandexMetrika.UWP</DisplayName>

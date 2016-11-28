@@ -123,12 +123,6 @@
     <EmbeddedResource Include="Properties\CyberSolution.YandexMetrika.Shared.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BlackBee.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\BlackBee-Toolkit\BlackBee.Base\bin\Release\BlackBee.Base.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CyberSolution.YandexMetrika.BAL\CyberSolution.YandexMetrika.BAL.csproj">
       <Project>{97ed757c-885b-4c1e-bd6e-d2342231ca38}</Project>
       <Name>CyberSolution.YandexMetrika.BAL</Name>

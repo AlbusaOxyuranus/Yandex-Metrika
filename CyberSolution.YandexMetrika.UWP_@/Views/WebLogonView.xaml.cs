@@ -36,12 +36,12 @@ namespace CyberSolution.YandexMetrika.UWP.Views
 
                     if (!string.IsNullOrEmpty(token.Value))
                     {
-                        SessionViewModel.Instance.Token = token.Value;
+
                         var task = CounterViewModel.GetDataAsync(SessionViewModel.Instance.Token);
                         task.ContinueWith((t) =>
                          {
                              StoreStorage.CreateOrGet<CounterViewModel>().Items = task.Result;
-                             
+                             SessionViewModel.Instance.Token = token.Value;
                              this.Frame.Navigate(typeof(MainView));
                          }, TaskScheduler.FromCurrentSynchronizationContext());
 

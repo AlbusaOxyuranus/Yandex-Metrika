@@ -39,5 +39,16 @@ namespace CyberSolution.YandexMetrika.DAL.ProxyClasses
         /// </summary>
         [DataMember(Name = "code_status")]
         public string CodeStatus { get; set; }
+
+        /// <summary>
+        /// Наименование сайта (произвольная строка).
+        /// </summary>
+        [DataMember(Name= "name")]
+        public string Name { get; set; }
+        /// <summary>
+        /// Полный домен сайта.
+        /// </summary>
+        [DataMember(Name= "site")]
+        public object Site { get; set; }
     }
 }

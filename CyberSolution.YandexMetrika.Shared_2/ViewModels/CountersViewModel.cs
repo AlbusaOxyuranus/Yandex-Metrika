@@ -12,11 +12,6 @@ namespace CyberSolution.YandexMetrika.Shared.ViewModels
     public class CounterViewModel:ObservableObject
         ,ICounter
     {
-        public decimal Id { get; set; }
-        public string Name
-        {
-            get; set;
-        }
         public CounterViewModel()
         {
             Items = new ObservableCollection<CounterViewModel>();
@@ -36,8 +31,12 @@ namespace CyberSolution.YandexMetrika.Shared.ViewModels
                 NotifyPropertyChanged();
             }
         }
+        public string Name
+        {
+            get;set;
+        }
 
-        public object Site { get; private set; }
+        
 
         public static async Task<ObservableCollection<CounterViewModel>> GetDataAsync(string token)
         {
@@ -50,12 +49,12 @@ namespace CyberSolution.YandexMetrika.Shared.ViewModels
                var result = await bc.GetCountersAsync(token);
                 foreach (var item in result)
                 {
-                    collection.Add(new CounterViewModel() {Id=item.Id,Name = item.Name,Site= item .Site});
+                    collection.Add(new CounterViewModel() {Id=item.Id,Name = item.OwnerLogin});
                 }
             }
                 return collection;
         }
 
-        
+        public decimal Id { get; set; }
     }
 }

@@ -3,6 +3,8 @@
     public class CounterModel
     {
         public decimal Id { get; set; }
+        public string Name { get; internal set; }
         public string OwnerLogin { get; set; }
+        public object Site { get; internal set; }
     }
 }

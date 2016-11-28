@@ -13,18 +13,18 @@ namespace CyberSolution.YandexMetrika.EasyConnect
     public class Proxy: IProxy
     {
         public HttpClient HttpClient { get; private set; }
-
+        public IHelperStreamReader HelperStreamReader { get; private set; }
         public Proxy()
         {
             CreateHandler();
-            
+            HelperStreamReader = new HelperStreamReader();
         }
         public void CreateHandler(HttpMessageHandler handler = null)
         {
             HttpClient = handler == null ? new HttpClient() { Timeout = new TimeSpan(0, 0, 60) } : new HttpClient(handler);
             //HttpClient.DefaultRequestHeaders.IfModifiedSince = DateTimeOffset.Now;
         }
-        private async Task<TClass> GetObject<TClass>(HttpResponseMessage response, Encoding encoding = null) where TClass : class
+        private async Task<TResult> GetObjectAsync<TResult>(HttpResponseMessage response, Encoding encoding = null) where TResult : class
         {
             if (response.StatusCode != HttpStatusCode.OK)
                 throw new HttpRequestException(response.StatusCode.ToString());
@@ -37,7 +37,7 @@ namespace CyberSolution.YandexMetrika.EasyConnect
             Debug.WriteLine(" Dev Windows Phone Log : >> Method ReadObject is stream = " + responce);
 #endif
             //Временно
-            return default(TClass);
+            return HelperStreamReader.ReadObject<TResult>(responce,encoding);
         }
         public async Task<TResult> GetAsync<TResult>(string uri) where TResult : class
         {
@@ -46,7 +46,7 @@ namespace CyberSolution.YandexMetrika.EasyConnect
 #endif
             
             var response = await HttpClient.GetAsync(uri);
-            var result = await GetObject<TResult>(response);
+            var result = await GetObjectAsync<TResult>(response);
 
             return result;
         }

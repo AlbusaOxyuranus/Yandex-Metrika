@@ -9,11 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSolution.YandexMetrika
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSolution.YandexMetrika.DAL", "CyberSolution.YandexMetrika.DAL\CyberSolution.YandexMetrika.DAL.csproj", "{A127D5A6-0B23-4AA3-AE11-C85D1949001B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSolution.YandexMetrika.Shared", "CyberSolution.YandexMetrika.Shared\CyberSolution.YandexMetrika.Shared.csproj", "{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSolution.YandexMetrika.BAL", "CyberSolution.YandexMetrika.BAL\CyberSolution.YandexMetrika.BAL.csproj", "{97ED757C-885B-4C1E-BD6E-D2342231CA38}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CyberSolution.YandexMetrika.Shared", "CyberSolution.YandexMetrika.Shared\CyberSolution.YandexMetrika.Shared.shproj", "{12C3A33B-607D-4540-BCA6-78584585ED66}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CyberSolution.YandexMetrika.Shared\CyberSolution.YandexMetrika.Shared.projitems*{12c3a33b-607d-4540-bca6-78584585ed66}*SharedItemsImports = 13
+		CyberSolution.YandexMetrika.Shared\CyberSolution.YandexMetrika.Shared.projitems*{e42dc038-7920-484f-9ddf-93da51c3c55c}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -79,22 +83,6 @@ Global
 		{A127D5A6-0B23-4AA3-AE11-C85D1949001B}.Release|x64.Build.0 = Release|x64
 		{A127D5A6-0B23-4AA3-AE11-C85D1949001B}.Release|x86.ActiveCfg = Release|x86
 		{A127D5A6-0B23-4AA3-AE11-C85D1949001B}.Release|x86.Build.0 = Release|x86
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Debug|ARM.ActiveCfg = Debug|ARM
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Debug|ARM.Build.0 = Debug|ARM
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Debug|x64.ActiveCfg = Debug|x64
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Debug|x64.Build.0 = Debug|x64
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Debug|x86.ActiveCfg = Debug|x86
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Debug|x86.Build.0 = Debug|x86
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|ARM.ActiveCfg = Release|ARM
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|ARM.Build.0 = Release|ARM
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|x64.ActiveCfg = Release|x64
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|x64.Build.0 = Release|x64
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|x86.ActiveCfg = Release|x86
-		{F00AF0E0-3BBB-4BF7-84CC-687725C1A5D7}.Release|x86.Build.0 = Release|x86
 		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97ED757C-885B-4C1E-BD6E-D2342231CA38}.Debug|ARM.ActiveCfg = Debug|ARM
