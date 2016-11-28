@@ -1,48 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<Package
-  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
-
-  <Identity
-    Name="356a06bf-97e4-4eb2-a5e1-42d0ef2e3c5f"
-    Publisher="CN=mrPro_000"
-    Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="356a06bf-97e4-4eb2-a5e1-42d0ef2e3c5f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="41368ProkhorchikDA.CyberTool" Publisher="CN=825ED722-73EB-4B07-8F34-C3130D946315" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="356a06bf-97e4-4eb2-a5e1-42d0ef2e3c5f" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>CyberSolution.YandexMetrika.UWP</DisplayName>
-    <PublisherDisplayName>mrPro_000</PublisherDisplayName>
+    <DisplayName>CyberTool Метрика</DisplayName>
+    <PublisherDisplayName>Cyber Solution</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
-
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-      Executable="$targetnametoken$.exe"
-      EntryPoint="CyberSolution.YandexMetrika.UWP.App">
-      <uap:VisualElements
-        DisplayName="CyberSolution.YandexMetrika.UWP"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="CyberSolution.YandexMetrika.UWP"
-        BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="CyberSolution.YandexMetrika.UWP.App">
+      <uap:VisualElements DisplayName="CyberTool Метрика" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="CyberSolution.YandexMetrika.UWP" BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
+        </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
