@@ -26,7 +26,8 @@ namespace CyberSolution.YandexMetrika.BAL
             {
                 CounterModel counterModel = new CounterModel()
                 {
-                    Id=counter.Id,
+                    Status = (Status)System.Enum.Parse(typeof(Status), "CS_ERR_CONNECT"),
+                    Id =counter.Id,
                     Name=counter.Name,
                     Site=counter.Site,
                     OwnerLogin = counter.OwnerLogin                    

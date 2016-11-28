@@ -117,6 +117,10 @@
   <ItemGroup>
     <Content Include="Assets\Images\npJx5nhFy4o.jpg" />
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\Images\Status\Status_Checked.png" />
+    <Content Include="Assets\Images\Status\Status_OK.png" />
+    <Content Include="Assets\Images\Status\Status_Problem.png" />
+    <Content Include="Assets\Images\Status\Status_Virus.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

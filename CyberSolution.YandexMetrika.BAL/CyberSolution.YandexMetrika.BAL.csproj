@@ -112,6 +112,7 @@
     <Compile Include="Interfaces\IBussinessContext.cs" />
     <Compile Include="Interfaces\ICounterContext.cs" />
     <Compile Include="Models\CounterModel.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\CyberSolution.YandexMetrika.BAL.rd.xml" />
   </ItemGroup>

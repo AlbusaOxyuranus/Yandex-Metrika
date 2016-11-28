@@ -9,6 +9,7 @@
     <Import_RootNamespace>CyberSolution.YandexMetrika.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StatusConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UriHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CountersViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ICounter.cs" />
