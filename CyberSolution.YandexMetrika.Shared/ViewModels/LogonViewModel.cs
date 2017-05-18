@@ -2,7 +2,7 @@
 namespace CyberSolution.YandexMetrika.Shared.ViewModels
 {
 
-    using BlackBee.Base;
+    using BlackBee.Toolkit.Base;
 
     public class LogonViewModel:ObservableObject
     {

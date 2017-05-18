@@ -112,11 +112,6 @@
     <Compile Include="ViewModels\LogonViewModel.cs" />
     <EmbeddedResource Include="Properties\CyberSolution.YandexMetrika.Shared.rd.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="BlackBee.Base">
-      <HintPath>..\..\BlackBee-Toolkit\BlackBee.Base\bin\Debug\BlackBee.Base.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0' ">
     <VisualStudioVersion>15.0</VisualStudioVersion>
   </PropertyGroup>
